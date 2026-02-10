@@ -67,7 +67,54 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 <li>Iterate steps 4 and 5 until all nodes get visited, and there are no more unvisited nodes.</li>
 
 </ol>
+## PROGRAM:
+```
+from collections import deque
+from collections import defaultdict
 
+
+'''
+V E
+FOR EVERY EDGE
+U V
+7 9
+A B
+A C 
+A F
+C E
+C F
+C D
+D E 
+D G
+G F
+'''
+def bfs(graph,start,visited,path):
+    queue = deque()
+    path.append(start)
+    queue.append(start)
+    visited[start] = True
+    while len(queue) != 0:
+        tmpnode = queue.popleft()
+        for neighbour in graph[tmpnode]:
+            if visited[neighbour] == False:
+                path.append(neighbour)
+                queue.append(neighbour)
+                visited[neighbour] = True
+    return path
+
+graph = defaultdict(list)
+v,e = map(int,input().split())
+for i in range(e):
+    u,v = map(str,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+
+start = 'A'
+path = []
+visited = defaultdict(bool)
+traversedpath = bfs(graph,start,visited,path)
+print(traversedpath)
+```
 <hr>
 <h3>Sample Input</h3>
 <hr>
@@ -83,10 +130,9 @@ D G <BR>
 G F <BR>
 <hr>
 <h3>Sample Output</h3>
-<hr>
-['A', 'B', 'C', 'F', 'E', 'D', 'G']
 
-<hr>
+<img width="906" height="583" alt="image" src="https://github.com/user-attachments/assets/062c6e9e-4cee-4c8c-b29d-b3406d07ccf8" />
+
 
 <hr>
 <h3>Sample Input</h3>
@@ -100,9 +146,9 @@ G F <BR>
 3 4 <BR>
 <hr>
 <h3>Sample Output</h3>
-<hr>
-['0', '1', '2', '3', '4']
-<hr>
+
+<img width="801" height="458" alt="image" src="https://github.com/user-attachments/assets/6f75c4d2-6d76-4e02-930a-e60cd9d92064" />
+
 <h3>Result:</h3>
 <hr>
 <p>Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.</p>
