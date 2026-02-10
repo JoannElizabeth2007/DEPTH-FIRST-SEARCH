@@ -1,6 +1,6 @@
 # BREADTH-FIRST-SEARCH
 <h1>ExpNo 3 : Implement Breadth First Search Traversal of a Graph</h1> 
-<h3>Name: JOANN ELIZABETH SAMUEL  </h3>
+<h3>Name: JOANN ELIZABETH SAMUEL </h3>
 <h3>Register Number: 212224040139 </h3>
 <H3>Aim:</H3>
 <p>To Implement Breadth First Search Traversal of a Graph using Python 3.</p>
@@ -67,8 +67,10 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 <li>Iterate steps 4 and 5 until all nodes get visited, and there are no more unvisited nodes.</li>
 
 </ol>
-## PROGRAM:
-```
+
+
+## Program:
+```python
 from collections import deque
 from collections import defaultdict
 
@@ -115,9 +117,9 @@ visited = defaultdict(bool)
 traversedpath = bfs(graph,start,visited,path)
 print(traversedpath)
 ```
-<hr>
+
 <h3>Sample Input</h3>
-<hr>
+
 7 9 <BR>
 A B <BR>
 A C <BR>
@@ -128,15 +130,14 @@ C D <BR>
 D E <BR>
 D G <BR>
 G F <BR>
-<hr>
+
 <h3>Sample Output</h3>
 
-<img width="906" height="583" alt="image" src="https://github.com/user-attachments/assets/062c6e9e-4cee-4c8c-b29d-b3406d07ccf8" />
+<img width="885" height="535" alt="-" src="https://github.com/user-attachments/assets/8f27a922-8d1b-44ea-b326-474e713b88b5" />
 
 
-<hr>
 <h3>Sample Input</h3>
-<hr>
+
 5 6 <BR>
 0 1 <BR>
 0 2 <BR>
@@ -144,18 +145,14 @@ G F <BR>
 1 3 <BR>
 2 4 <BR>
 3 4 <BR>
-<hr>
+
 <h3>Sample Output</h3>
 
-<img width="801" height="458" alt="image" src="https://github.com/user-attachments/assets/6f75c4d2-6d76-4e02-930a-e60cd9d92064" />
+<img width="710" height="402" alt="Screenshot 2025-08-26 093648" src="https://github.com/user-attachments/assets/60238abe-667b-4b0b-b919-94359cb6c0b6" />
+
+
+
 
 <h3>Result:</h3>
-<hr>
+
 <p>Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.</p>
-
-
-
-
-
-
-
